@@ -8,15 +8,16 @@ df = pd.read_csv('vehicles_us.csv')
 # Encabezado
 st.header("Ánalisis de datos de anuncion de venta de autos")
 
+# Escribir un mensaje en la aplicación
+st.write('Selecciona una opción para visualizar el gráfico correspondiente.')
+
 # Checkboxes para seleccionar los gráficos a mostrar
-hist_boton = st.button('Construir histograma')
-disp_boton = st.button('Construir gráfico de dispersión')
+hist_check = st.checkbox('Construir histograma')
+disp_check = st.checkbox('Construir gráfico de dispersión')
 
-# Lógica a ejecutar cuando se hace clic en el boton de histograma
-if hist_boton:
-    # Escribir un mensaje en la aplicación
-    st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
-
+# Lógica a ejecutar cuando se hace clic en el check de histograma
+if hist_check:
+    
     # Crear un histograma utilizando plotly.graph_objects
     # Se crea una figura vacía y luego se añade un rastro de histograma
     fig = go.Figure(data=[go.Histogram(x=df['odometer'])])
@@ -27,7 +28,7 @@ if hist_boton:
     # Mostrar el gráfico Plotly interactivo en la aplicación Streamlit
     st.plotly_chart(fig, use_container_width=True)
 
-if disp_boton:
+if disp_check:
     # Crear un scatter plot utilizando plotly.graph_objects
     # Se crea una figura vacía y luego se añade un rastro de scatter
     fig_2 = go.Figure(data=[go.Scatter(x=df['odometer'], y=df['price'], mode='markers')])
