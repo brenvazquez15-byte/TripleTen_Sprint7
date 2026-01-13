@@ -1,8 +1,19 @@
-# TripleTen_Sprint7
+# TripleTen Sprint 7
 
-Ánalisis de datos de venta de autos
-Esta es una aplicación que interactiva con Sreamlit, que analiza los datos del archivo 'vehicles_us.csv'.
+## 📌 Contexto del proyecto
+Análisis de datos con el objetivo de identificar patrones y apoyar la toma de decisiones.
 
-La aplicación ayuda explorar el conjunto de datos mediante un histograma de la distribución del odómetro y un gráfico de dispersión entre el odometro y el precio.
+## 🔍 Análisis realizado
+- Limpieza de datos
+- Análisis exploratorio
+- Visualización de variables clave
 
-La funcionalidad es atraves de un 'checkbox' que cuando se selecciona muestra el gráfico.
+## 📊 Conclusiones principales
+- Se identificaron tendencias relevantes
+- Los resultados permiten tomar decisiones basadas en datos
+
+## 🛠️ Herramientas
+- Python
+- Pandas
+- Matplotlib
+- Jupyter Notebook
